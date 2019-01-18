@@ -1,9 +1,9 @@
 package person.seven.mapper;
 
-import java.util.List;
-import org.apache.ibatis.annotations.Param;
 import person.seven.entity.User;
 import person.seven.entity.UserExample;
+
+import java.util.List;
 
 public interface UserMapper {
     long countByExample(UserExample example);
@@ -19,10 +19,6 @@ public interface UserMapper {
     List<User> selectByExample(UserExample example);
 
     User selectByPrimaryKey(Integer id);
-
-    int updateByExampleSelective(@Param("record") User record, @Param("example") UserExample example);
-
-    int updateByExample(@Param("record") User record, @Param("example") UserExample example);
 
     int updateByPrimaryKeySelective(User record);
 
